@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-USERNAME.github.io/technical-seo-schema-lab/sitemap.xml
+Sitemap: https:/sujal20037/.github.io/technical-seo-schema-lab/sitemap.xml
