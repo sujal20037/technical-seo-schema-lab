@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical SEO Lab | Metadata & Schema Playground</title>
+  <meta name="description" content="An educational technical SEO toolkit with a meta-tag preview, JSON-LD schema playground, and deployment checklist.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/technical-seo-schema-lab/">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json" id="website-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Technical SEO Lab",
+    "url": "https://YOUR-USERNAME.github.io/technical-seo-schema-lab/",
+    "description": "An educational technical SEO toolkit."
+  }
+  </script>
+  <script type="application/ld+json" id="organization-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Technical SEO Lab",
+    "url": "https://YOUR-USERNAME.github.io/technical-seo-schema-lab/"
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Technical SEO Lab home"><span class="brand-mark">⌕</span> Technical SEO Lab</a>
+    <nav aria-label="Main navigation">
+      <a href="#playground">Playground</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> HANDS-ON TECHNICAL SEO PROJECT</p>
+        <h1>Make your pages easier to understand.</h1>
+        <p class="hero-text">Explore page metadata, preview a search snippet, and validate JSON-LD syntax before you publish.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#playground">Open the playground <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="#checklist">Deployment checklist</a>
+        </div>
+        <div class="hero-points">
+          <span>✓ No account needed</span><span>✓ Runs in your browser</span><span>✓ Beginner-friendly</span>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Search snippet preview illustration">
+        <div class="browser-bar"><i></i><i></i><i></i><span>Search preview</span></div>
+        <div class="search-preview">
+          <div class="search-logo">G</div>
+          <div class="result-url">your-site.example › page</div>
+          <div class="result-title">Your page title appears here</div>
+          <div class="result-description">A concise description helps people understand what your page offers before they visit.</div>
+          <div class="preview-line"></div><div class="preview-line short"></div>
+        </div>
+        <div class="floating-chip"><span>✓</span> Metadata preview</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Project features">
+      <article class="feature-card"><div class="feature-icon blue">⌕</div><h2>Snippet preview</h2><p>Edit your title and description and see a simple search-result preview update instantly.</p></article>
+      <article class="feature-card"><div class="feature-icon violet">{ }</div><h2>JSON-LD checker</h2><p>Check whether your JSON-LD is valid JSON and inspect the schema type you entered.</p></article>
+      <article class="feature-card"><div class="feature-icon green">✓</div><h2>Launch checklist</h2><p>Track the important checks to complete before publishing a technical SEO change.</p></article>
+    </section>
+
+    <section class="section" id="playground">
+      <div class="section-heading"><div><p class="eyebrow">INTERACTIVE TOOL</p><h2>SEO playground</h2></div><p>Changes are local to this page. This tool does not crawl your site or replace Google's validators.</p></div>
+      <div class="tool-grid">
+        <article class="panel">
+          <div class="panel-heading"><span class="panel-number">01</span><div><h3>Search snippet preview</h3><p>Try changing the metadata.</p></div></div>
+          <label for="seo-title">Page title <span id="title-count">48 / 60</span></label>
+          <input id="seo-title" maxlength="90" value="Technical SEO Lab | Metadata & Schema Playground">
+          <label for="seo-description">Meta description <span id="description-count">112 / 160</span></label>
+          <textarea id="seo-description" rows="3" maxlength="220">An educational technical SEO toolkit with a meta-tag preview, JSON-LD schema playground, and deployment checklist.</textarea>
+          <div class="google-card">
+            <div class="google-url"><span class="mini-g">G</span> your-site.example › page</div>
+            <div class="google-title" id="preview-title">Technical SEO Lab | Metadata & Schema Playground</div>
+            <p id="preview-description">An educational technical SEO toolkit with a meta-tag preview, JSON-LD schema playground, and deployment checklist.</p>
+          </div>
+          <p class="hint">Preview is illustrative; Google may rewrite titles and snippets.</p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading"><span class="panel-number">02</span><div><h3>JSON-LD syntax checker</h3><p>Paste a JSON-LD object to check its syntax.</p></div></div>
+          <label for="schema-input">Structured data (JSON-LD)</label>
+          <textarea id="schema-input" class="code-input" rows="12" spellcheck="false">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Example Organization",
+  "url": "https://example.com/"
+}</textarea>
+          <div class="tool-actions"><button id="validate-button" class="button primary" type="button">Check JSON syntax</button><button id="reset-button" class="button secondary" type="button">Reset example</button></div>
+          <div id="schema-result" class="result-box neutral" role="status" aria-live="polite">Ready to check your JSON-LD syntax.</div>
+          <p class="hint">Syntax validation does not confirm eligibility for Google rich results. Use the official validators after deployment.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section checklist-section" id="checklist">
+      <div class="section-heading"><div><p class="eyebrow">BEFORE YOU SHIP</p><h2>Technical SEO launch checklist</h2></div><p>Tick each item as you complete it. Your progress is shown for this session.</p></div>
+      <div class="checklist-layout">
+        <div class="checklist-items">
+          <label class="check-row"><input type="checkbox"><span><strong>Confirm canonical URL</strong><small>Use the preferred absolute HTTPS URL for this page.</small></span></label>
+          <label class="check-row"><input type="checkbox"><span><strong>Review title and description</strong><small>Make them accurate, useful, and unique to the page.</small></span></label>
+          <label class="check-row"><input type="checkbox"><span><strong>Validate JSON-LD syntax</strong><small>Check the JSON syntax and confirm the properties match visible content.</small></span></label>
+          <label class="check-row"><input type="checkbox"><span><strong>Test the deployed URL</strong><small>Run Schema Markup Validator and Google's Rich Results Test where applicable.</small></span></label>
+          <label class="check-row"><input type="checkbox"><span><strong>Capture genuine deployment evidence</strong><small>Save your own GitHub commit and actual validator results.</small></span></label>
+        </div>
+        <aside class="progress-card"><div class="progress-top"><span>Launch readiness</span><strong id="progress-label">0 / 5</strong></div><div class="progress-track"><div id="progress-fill"></div></div><p id="progress-message">Start with the canonical URL and metadata checks.</p><a href="https://validator.schema.org/" target="_blank" rel="noreferrer">Open Schema Markup Validator ↗</a><a href="https://search.google.com/test/rich-results" target="_blank" rel="noreferrer">Open Google's Rich Results Test ↗</a></aside>
+      </div>
+    </section>
+
+    <section class="about" id="about"><div class="about-mark">⌕</div><div><p class="eyebrow">ABOUT THIS PROJECT</p><h2>A practical learning project</h2><p>This independent demo showcases basic on-page metadata, JSON-LD syntax checking, and a deployment checklist. It is educational and does not claim that a website has been audited or that Google has approved its structured data.</p></div></section>
+  </main>
+
+  <footer><span>Technical SEO Lab</span><span>Built for learning · HTML, CSS, JavaScript & JSON-LD</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
